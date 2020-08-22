@@ -92,13 +92,12 @@ background-size: contain;
 .commissioned-section{
 width: 50%;
 margin:3rem auto;
+box-shadow : 2px 2px 12px 2px gainsboro;
 }
 video {
 min-width: 100%;
 }
-.commissioned-section{
-box-shadow : 2px 2px 12px 2px gainsboro;
-}
+
 .commissioned-section .orderButton button{
 width: 200px;
 border-radius: 20px;
@@ -181,6 +180,11 @@ color: #fff !important;
 }
 /*****************************************RESPONSIVE ***************************************************/
 @media  screen and (max-width:768px){
+
+    .display-4{
+        font-size: 1.5rem !important;
+        }
+
 .logo a{
 font-size : 2rem;   
 }
@@ -189,7 +193,7 @@ margin: 0rem 0rem;
 }
 .navbar li a { 
 margin: 0 0px 0px 0px;
-font-size: 16px;
+font-size: 14px;
 }
 .right-links{
 display: none;
@@ -214,6 +218,7 @@ height: 300px;
 .commissioned-section{
 width: 100%;
 margin:0rem auto;
+box-shadow: none;
 }
 .blog-section {
     margin: 0rem 2rem;
