@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+
+
+a{
+color:#222222 !important;
+}
+.display-4{
+font-size: 2.5rem !important;
+}
+.card, .card-footer{
+    background-color: white !important;
+    border: none !important;
+}
+
+.image-container img , .video-background video, .art-gallery img{
+    width: 100%;
+    height: 100%;
+}
+
+.logo a{
+font-family: 'Lobster', cursive;
+font-size : 3rem;
+}
+.navbar{
+margin: 1rem 3rem;
+}
+.navbar li a {
+margin: 0 20px 0px 0px;
+font-size: 18px;
+}
+.navbar li a:hover{
+transition:  all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+background-color: #EAEAEA;
+}
+/*****************************************INTRO WRAPPER ***************************************************/
+.intro-wrapper{
+margin: 1rem 4rem;
+}
+.carousel-item {
+height: 80vh;
+min-height: 350px;
+background: no-repeat center center scroll;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+.carousel-fade .carousel-item {
+opacity: 0;
+transition: opacity ease-out ;
+}
+.carousel-fade .carousel-item.active,.carousel-fade .carousel-item-next.carousel-item-left,.carousel-fade .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+}
+.carousel-fade .active.carousel-item-left,.carousel-fade .active.carousel-item-right {
+opacity: 0;
+}
+.carousel-fade .carousel-item-next,.carousel-fade .carousel-item-prev,.carousel-fade .carousel-item.active,.carousel-fade .active.carousel-item-left,.carousel-fade .active.carousel-item-prev {
+transform: translateX(0);
+transform: translate3d(0, 0, 0);
+}
+.intro-content{
+padding : 30px 100px;
+font-family: 'Merriweather', serif;
+}
+/*****************************************ORIGINAL ART ***************************************************/
+.original-art{
+margin: 2rem 5rem;
+} 
+.original-art .row{
+margin:  2rem 0rem;
+}
+.images-block{
+display: flex;
+justify-content: space-between;
+height: 400px;
+margin: 2rem 4rem;
+}
+.background{
+height: 400px;
+background: no-repeat center center scroll;
+object-fit: contain;
+-webkit-background-size: contain;
+-moz-background-size: contain;
+-o-background-size: contain;
+background-size: contain; 
+}
+/*****************************************COMMISSIONED ART ***************************************************/
+.commissioned-section{
+width: 50%;
+margin:3rem auto;
+}
+video {
+min-width: 100%;
+}
+.commissioned-section{
+box-shadow : 2px 2px 12px 2px gainsboro;
+}
+.commissioned-section .orderButton button{
+width: 200px;
+border-radius: 20px;
+height: 50px;
+}
+/*****************************************BLOG SECTION ***************************************************/
+.blog-section , .interview-section{
+margin: 0rem 4rem;
+}
+
+
+/*****************************************GALLERY ***************************************************/
+.art-gallery .gallery { 
+-webkit-column-count: 3;
+-moz-column-count: 3;
+column-count: 3;
+-webkit-column-gap: 30px;
+-moz-column-gap: 30px;
+column-gap: 30px;
+margin-top: 1rem 4rem;
+overflow: hidden;
+padding: 0rem 8rem;
+cursor: pointer;
+}
+.art-gallery .gallery img { 
+width: 100%; 
+height: auto;
+transition: 500ms;
+margin-bottom: 30px;
+border-radius:2px;
+page-break-inside: avoid; /* For Firefox. */
+-webkit-column-break-inside: avoid; /* For Chrome & friends. */
+break-inside: avoid; /* For standard browsers like IE. :-) */
+}
+.art-gallery .gallery img:hover {
+opacity: 1;
+}
+.modal-img,.model-vid{
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+display: table
+}
+.modal-body{
+padding: 0px;
+}
+.modal-dialog {
+height: 100%;
+position: relative;
+margin: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.modal-content {
+border: none;
+}
+/*****************************************FOOTER***************************************************/
+
+footer .menus{
+justify-content: space-around;
+margin:  5rem;
+}
+footer .menus li a{
+font-family: 'Baloo Tamma 2', cursive;
+font-size: 19px;
+color: #fff !important;
+}
+
+#mapArea{
+
+   
+    height: 480px;
+}
+#mapArea .map{
+    width: 100%;
+    overflow-y: hidden !important;
+    
+}
+/*****************************************RESPONSIVE ***************************************************/
+@media  screen and (max-width:768px){
+.logo a{
+font-size : 2rem;   
+}
+.navbar{
+margin: 0rem 0rem; 
+}
+.navbar li a { 
+margin: 0 0px 0px 0px;
+font-size: 16px;
+}
+.right-links{
+display: none;
+}
+.intro-wrapper{
+margin: 1rem 1rem;
+}
+.carousel-item {
+height: 70vh;
+}
+.intro-content{
+padding : 2rem 0rem;
+text-align: center;
+}
+
+.original-art {
+    margin: 2rem 0rem;
+}
+.background{
+height: 300px;
+}
+.commissioned-section{
+width: 100%;
+margin:0rem auto;
+}
+.blog-section {
+    margin: 0rem 2rem;
+    }
+.art-gallery .gallery { 
+-webkit-column-count: 1;
+-moz-column-count: 1;
+column-count: 1;
+padding: 0rem 5rem;
+}
+.art-gallery .gallery div { 
+margin: 0; 
+width: 200px;
+}
+.interview-section{
+    margin: 0rem 0rem;
+    }
+footer{
+height: 300px;
+margin: 0 0 2rem;
+}
+footer .menus{
+flex-wrap: wrap;
+margin:  1rem 20px;
+list-style-type: none;
+}
+footer .menus li {
+font-size: 15px;
+}
+}
