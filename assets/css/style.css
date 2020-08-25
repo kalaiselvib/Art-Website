@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 
-
+html,body{
+  overflow-x: hidden !important;
+}
 a{
 color:#222222 !important;
 }
@@ -89,19 +91,118 @@ object-fit: contain;
 background-size: contain; 
 }
 /*****************************************COMMISSIONED ART ***************************************************/
-.commissioned-section{
-width: 50%;
-margin:3rem auto;
-box-shadow : 2px 2px 12px 2px gainsboro;
-}
-video {
-min-width: 100%;
+
+.commissioned-art {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow-x: hidden !important;
+  margin:  auto;
 }
 
-.commissioned-section .orderButton button{
-width: 200px;
-border-radius: 20px;
-height: 50px;
+.commissioned-art .slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.commissioned-art .slides input{
+  display: none;
+}
+
+.commissioned-art .slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.commissioned-art .slide img{
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+
+.orderButton{
+  margin:20px 0px 50px;
+ width: 200px;
 }
 /*****************************************BLOG SECTION ***************************************************/
 .blog-section , .interview-section{
@@ -110,52 +211,97 @@ margin: 0rem 4rem;
 
 
 /*****************************************GALLERY ***************************************************/
-.art-gallery .gallery { 
--webkit-column-count: 3;
--moz-column-count: 3;
-column-count: 3;
--webkit-column-gap: 30px;
--moz-column-gap: 30px;
-column-gap: 30px;
-margin-top: 1rem 4rem;
-overflow: hidden;
-padding: 0rem 8rem;
-cursor: pointer;
+.art-gallery  {
+  vertical-align: middle;
 }
-.art-gallery .gallery img { 
-width: 100%; 
-height: auto;
-transition: 500ms;
-margin-bottom: 30px;
-border-radius:2px;
-page-break-inside: avoid; /* For Firefox. */
--webkit-column-break-inside: avoid; /* For Chrome & friends. */
-break-inside: avoid; /* For standard browsers like IE. :-) */
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
-.art-gallery .gallery img:hover {
-opacity: 1;
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
 }
-.modal-img,.model-vid{
-margin: 0;
-padding: 0;
-width: 100%;
-height: 100%;
-display: table
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
 }
-.modal-body{
-padding: 0px;
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
-.modal-dialog {
-height: 100%;
-position: relative;
-margin: auto;
-display: flex;
-align-items: center;
-justify-content: center;
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
-.modal-content {
-border: none;
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
 /*****************************************FOOTER***************************************************/
 
 footer .menus{
@@ -164,14 +310,15 @@ margin:  5rem;
 }
 footer .menus li a{
 font-family: 'Baloo Tamma 2', cursive;
-font-size: 19px;
+font-size: 18px;
 color: #fff !important;
 }
 
 #mapArea{
 
    
-    height: 480px;
+    margin: 30px 30px;
+  
 }
 #mapArea .map{
     width: 100%;
@@ -208,6 +355,49 @@ height: 70vh;
 padding : 2rem 0rem;
 text-align: center;
 }
+.commissioned-art {
+ display: none;
+}
+
+.commissioned-art .slides{
+  width: 500%;
+  height: 400px;
+  display: flex;
+}
+
+.commissioned-art .slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.commissioned-art .slide img{
+  width: 300px;
+  height: 300px;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 0px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -0%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -0%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -0%;
+}
 
 .original-art {
     margin: 2rem 0rem;
@@ -215,24 +405,11 @@ text-align: center;
 .background{
 height: 300px;
 }
-.commissioned-section{
-width: 100%;
-margin:0rem auto;
-box-shadow: none;
-}
+
 .blog-section {
     margin: 0rem 2rem;
     }
-.art-gallery .gallery { 
--webkit-column-count: 1;
--moz-column-count: 1;
-column-count: 1;
-padding: 0rem 5rem;
-}
-.art-gallery .gallery div { 
-margin: 0; 
-width: 200px;
-}
+
 .interview-section{
     margin: 0rem 0rem;
     }
@@ -245,7 +422,10 @@ flex-wrap: wrap;
 margin:  1rem 20px;
 list-style-type: none;
 }
-footer .menus li {
+footer .menus li a{
 font-size: 15px;
 }
 }
+
+
+

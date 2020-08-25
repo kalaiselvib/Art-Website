@@ -3,6 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <title>Art website</title>
       <!--STYLE CSS only -->
       <link rel="stylesheet" href="assets/css/style.css" />
@@ -18,6 +19,7 @@
          />
       <!-- JS, Popper.js, and jQuery -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <!--Font awesome -->
@@ -64,7 +66,6 @@
                <div class="right-links ml-auto">
                   <ul class="navbar-nav ">
                      <li class="nav-item active">
-                      
                         <a class="nav-link" href="https://m.facebook.com/ramananthangadurai/" target="_blank">  <i class="fa fa-facebook-f"></i></a></i>
                      </li>
                      <li class="nav-item">
@@ -138,11 +139,10 @@
                </div>
             </header>
             <!----Intro section content ---->
-          
          </div>
          <!--- End of Intro wrapper-->
          <!----GRID STRUCTURE---->
-         <div class="original-art">
+         <div class="original-art mb-3">
             <div class="intro-content">
                <h2 class="text-center intro-title">ORIGINAL ART</h2>
             </div>
@@ -170,21 +170,57 @@
                   </div>
                </div>
             </div>
-           
          </div>
          <!----End of grid STRUCTURE---->
          <!----Commissioned section---->
-         <div class="intro-content">
-            <h2 class="text-center intro-title">Commissioned Art</h2>
-         </div>
-         <div class="commissioned-section ">
-            <div class="video-background ">
-               <video src="assets/images/video.mp4" loop muted autoplay controls>
-            </div>
-            <div class="orderButton text-center py-4">
-               <button class="btn btn-outline-dark">Click to Order</button>
-            </div>
-         </div>
+        
+       <!--image slider start-->
+       <div class="intro-content ">
+         <h2 class="text-center intro-title">COMMISSIONED ART</h2>
+      </div>
+    <div class=" commissioned-art slider">
+      <div class="slides">
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+          <img src="assets/images/a.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="assets/images/b.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="assets/images/c.PNG" alt="">
+        </div>
+       
+        <!--slide images end-->
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+         
+        </div>
+        <!--automatic navigation end-->
+      </div>
+      <!--manual navigation start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+      
+      </div>
+      <!--manual navigation end-->
+    </div>
+    <!--image slider end-->
+     
+         <center>
+         <button class="btn btn-md btn-outline-dark orderButton" >Click to Order</button> 
+         <center>
          <!----Blog section---->
          <div class="blog-section">
             <div class="intro-content">
@@ -209,7 +245,7 @@
                            <h4 class="card-title">Lorem ipsum dolor sit </h4>
                            <!--Text-->
                            <p class="card-text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta.. 
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta..
                            </p>
                            <a href="" target="_blank" class="btn btn-outline-dark btn-md ">Click to know more
                            </a>
@@ -233,7 +269,7 @@
                            <h4 class="card-title">Lorem ipsum dolor sit </h4>
                            <!--Text-->
                            <p class="card-text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta.. 
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta..
                            </p>
                            <a href="" target="_blank" class="btn btn-outline-dark btn-md">Click to know more
                            </a>
@@ -257,7 +293,7 @@
                            <h4 class="card-title ">Lorem ipsum dolor sit </h4>
                            <!--Text-->
                            <p class="card-text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta.. 
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta..
                            </p>
                            <a href="" target="_blank" class="btn btn-outline-dark btn-md">Click to know more
                            </a>
@@ -281,7 +317,7 @@
                            <h4 class="card-title">Lorem ipsum dolor sit </h4>
                            <!--Text-->
                            <p class="card-text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta.. 
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta..
                            </p>
                            <a href="" target="_blank" class="btn btn-outline-dark btn-md">Click to know more
                            </a>
@@ -292,129 +328,134 @@
                </div>
             </div>
          </div>
-
-
          <!--Gallery --->
-         <div class="art-gallery">
+         <div class="art-gallery m-3">
             <div class="intro-content">
-               <h2 class="text-center intro-title">Gallery</h2>
+               <h2 class="text-center intro-title">GALLERY</h2>
             </div>
-            <div class="gallery">
-               <img src="https://images.unsplash.com/photo-1523554888454-84137e72c3ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1545144760-f44b51664396?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" alt="" width="100%" height="auto" class="gallery-img" />		
-               <img src="https://images.unsplash.com/photo-1552510373-7a6449943736?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1309&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1577720580479-7d839d829c73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1276&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1578926314433-e2789279f4aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1578301978069-45264734cddc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=655&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1579541513287-3f17a5d8d62c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=689&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1580136579395-4bbb9ffdc4ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1479&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1577720643380-d74d33d4a068?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=730&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1588260540782-445cfdd2dad7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1578301978069-45264734cddc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=655&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1552510373-7a6449943736?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1309&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-               <img src="https://images.unsplash.com/photo-1578301978069-45264734cddc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=655&q=80" alt="" width="100%" height="auto" class="gallery-img" />
-            </div>
-            <div id="myModal" class="modal fade" role="dialog">
-               <div class="modal-dialog">
-                  <div class="modal-content">
-                     <div class="modal-body">
-                     </div>
+            <div class="w3-content" style="max-width:900px;max-height:auto;">
+               <img class="mySlides" src="assets/images/1.jpg" style="width:100%;display:none">
+               <img class="mySlides" src="assets/images/2.jpg" style="width:100%;display:none">
+               <img class="mySlides" src="assets/images/3.jpg" style="width:100%;display:none">
+               <img class="mySlides" src="assets/images/4.jpg" style="width:100%;display:none">
+               <img class="mySlides" src="assets/images/5.jpg" style="width:100%;display:none">
+               <img class="mySlides" src="assets/images/6.jpg" style="width:100%;display:none">
+               <div class="w3-row-padding w3-section">
+                  <div class="w3-col s2">
+                     <img class="demo w3-opacity w3-hover-opacity-off" src="assets/images/1.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+                  </div>
+                  <div class="w3-col s2">
+                     <img class="demo w3-opacity w3-hover-opacity-off" src="assets/images/2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+                  </div>
+                  <div class="w3-col s2">
+                     <img class="demo w3-opacity w3-hover-opacity-off" src="assets/images/3.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+                  </div>
+                  <div class="w3-col s2">
+                     <img class="demo w3-opacity w3-hover-opacity-off" src="assets/images/4.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)">
+                  </div>
+                  <div class="w3-col s2">
+                     <img class="demo w3-opacity w3-hover-opacity-off" src="assets/images/5.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(5)">
+                  </div>
+                  <div class="w3-col s2">
+                     <img class="demo w3-opacity w3-hover-opacity-off" src="assets/images/6.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(6)">
                   </div>
                </div>
             </div>
          </div>
-
-         
-
-        <!----Interview section---->
-        <div class="interview-section">
-         <div class="intro-content">
-            <h2 class="text-center intro-title">Interviews</h2>
+         <div id="mapArea" >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.8816708103905!2d80.261842!3d12.975636!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3abc376b03ced07d!2sFilbert%20Art%20Gallery!5e0!3m2!1sen!2sin!4v1598097811376!5m2!1sen!2sin"
+               width="600" height="450"
+               frameborder="0" style="border:0;"
+               allowfullscreen="" aria-hidden="false" tabindex="0" class="map">
+            </iframe>
          </div>
-         <div class="interview py-5 px-5">
-            <div class="row image-container">
-               <!--Grid column-->
-               <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="300">
-                  <!--Card-->
-                  <div class="card shadow">
-                     <!--Card image-->
-                     <div class="view overlay">
-                        <img src="https://images.unsplash.com/photo-1581826333631-38a49802b287?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" class="card-img-top" alt="">
-                        <a href="" target="_blank">
-                           <div class="mask rgba-white-slight"></div>
-                        </a>
+
+         <!----Interview section---->
+         <div class="interview-section">
+            <div class="intro-content">
+               <h2 class="text-center intro-title">INTERVIEWS</h2>
+            </div>
+            <div class="interview py-3 px-5">
+               <div class="row image-container">
+                  <!--Grid column-->
+                  <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="300">
+                     <!--Card-->
+                     <div class="card shadow">
+                        <!--Card image-->
+                        <div class="view overlay">
+                           <img src="https://images.unsplash.com/photo-1581826333631-38a49802b287?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" class="card-img-top" alt="">
+                           <a href="" target="_blank">
+                              <div class="mask rgba-white-slight"></div>
+                           </a>
+                        </div>
+                        <!--Card content-->
+                        <div class="card-body">
+                           <!--Title-->
+                           <h4 class="card-title">Lorem ipsum dolor sit </h4>
+                           <!--Text-->
+                           <p class="card-text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta..
+                           </p>
+                           <a href="" target="_blank" class="btn btn-outline-dark btn-md ">Click to know more
+                           </a>
+                        </div>
                      </div>
-                     <!--Card content-->
-                     <div class="card-body">
-                        <!--Title-->
-                        <h4 class="card-title">Lorem ipsum dolor sit </h4>
-                        <!--Text-->
-                        <p class="card-text">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta.. 
-                        </p>
-                        <a href="" target="_blank" class="btn btn-outline-dark btn-md ">Click to know more
-                        </a>
-                     </div>
+                     <!--/.card shadow-->
                   </div>
-                  <!--/.card shadow-->
-               </div>
-               <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="500">
-                  <!--Card-->
-                  <div class="card shadow">
-                     <!--Card image-->
-                     <div class="view overlay">
-                        <img src="https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="">
-                        <a href="" target="_blank">
-                           <div class="mask rgba-white-slight"></div>
-                        </a>
+                  <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="500">
+                     <!--Card-->
+                     <div class="card shadow">
+                        <!--Card image-->
+                        <div class="view overlay">
+                           <img src="https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="">
+                           <a href="" target="_blank">
+                              <div class="mask rgba-white-slight"></div>
+                           </a>
+                        </div>
+                        <!--Card content-->
+                        <div class="card-body">
+                           <!--Title-->
+                           <h4 class="card-title">Lorem ipsum dolor sit </h4>
+                           <!--Text-->
+                           <p class="card-text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta..
+                           </p>
+                           <a href="" target="_blank" class="btn btn-outline-dark btn-md">Click to know more
+                           </a>
+                        </div>
                      </div>
-                     <!--Card content-->
-                     <div class="card-body">
-                        <!--Title-->
-                        <h4 class="card-title">Lorem ipsum dolor sit </h4>
-                        <!--Text-->
-                        <p class="card-text">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta.. 
-                        </p>
-                        <a href="" target="_blank" class="btn btn-outline-dark btn-md">Click to know more
-                        </a>
-                     </div>
+                     <!--/.Card-->
                   </div>
-                  <!--/.Card-->
-               </div>
-               <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="700">
-                  <!--Card-->
-                  <div class="card shadow">
-                     <!--Card image-->
-                     <div class="view overlay">
-                        <img src="https://images.unsplash.com/photo-1577701122197-c9607038bd90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="">
-                        <a href="" target="_blank">
-                           <div class="mask rgba-white-slight"></div>
-                        </a>
+                  <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="700">
+                     <!--Card-->
+                     <div class="card shadow">
+                        <!--Card image-->
+                        <div class="view overlay">
+                           <img src="https://images.unsplash.com/photo-1577701122197-c9607038bd90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="">
+                           <a href="" target="_blank">
+                              <div class="mask rgba-white-slight"></div>
+                           </a>
+                        </div>
+                        <!--Card content-->
+                        <div class="card-body">
+                           <!--Title-->
+                           <h4 class="card-title ">Lorem ipsum dolor sit </h4>
+                           <!--Text-->
+                           <p class="card-text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta..
+                           </p>
+                           <a href="" target="_blank" class="btn btn-outline-dark btn-md">Click to know more
+                           </a>
+                        </div>
                      </div>
-                     <!--Card content-->
-                     <div class="card-body">
-                        <!--Title-->
-                        <h4 class="card-title ">Lorem ipsum dolor sit </h4>
-                        <!--Text-->
-                        <p class="card-text">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tempora ad adipisci explicabo rem dicta.. 
-                        </p>
-                        <a href="" target="_blank" class="btn btn-outline-dark btn-md">Click to know more
-                        </a>
-                     </div>
+                     <!--/.Card-->
                   </div>
-                  <!--/.Card-->
                </div>
-             
             </div>
          </div>
-      </div>
-
-
          <!--/.End of Gallery-->
-           <!-----Footer-->
-           <footer class="  pt-5 mx-4 bg-dark text-white">
+         <!-----Footer-->
+         <footer class="  pt-5 mx-4 bg-dark text-white">
             <div class="logo text-center ">
                <a href="#" class="text-white">
                Filbert Art Gallery
@@ -433,25 +474,16 @@
                <p class="text-center">No.8, 7th Main Rd, Valmiki Nagar, Thiruvalluvar Nagar, Thiruvanmiyur, Chennai, Tamil Nadu 600041</p>
                <p class="text-center">Phone : +91 9000000000</p>
             </div>
-           <div id="mapArea">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.8816708103905!2d80.261842!3d12.975636!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3abc376b03ced07d!2sFilbert%20Art%20Gallery!5e0!3m2!1sen!2sin!4v1598097811376!5m2!1sen!2sin" 
-            width="600" height="450" 
-            frameborder="0" style="border:0;" 
-            allowfullscreen="" aria-hidden="false" tabindex="0" class="map">
-         </iframe>
-           </div>
-
-           </footer>
+         </footer>
       </div>
+     
    </body>
-      <!--- End of Page wrapper-->
-      <script src="assets/js/script.js"></script>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script>
-         AOS.init({
-         once: true
-         })
-      </script>
-       
-   
+   <!--- End of Page wrapper-->
+   <script src="assets/js/script.js"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+      AOS.init({
+      once: true
+      })
+   </script>
 </html>
