@@ -325,6 +325,15 @@ color: #fff !important;
     overflow-y: hidden !important;
     
 }
+.about-container p{
+  padding: 0px 40px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+.about-container .about-btn a{
+  background-color : #BA1B1D;
+ 
+}
 /*****************************************RESPONSIVE ***************************************************/
 @media  screen and (max-width:768px){
 
