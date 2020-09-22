@@ -332,7 +332,11 @@ color: #fff !important;
 }
 .about-container .about-btn a{
   background-color : #BA1B1D;
- 
+}
+..about-container .about-img img{
+  height: 100%;
+  width: 100%;
+  padding: 0px 40px;
 }
 /*****************************************RESPONSIVE ***************************************************/
 @media  screen and (max-width:768px){
