@@ -435,7 +435,7 @@ color: #fff !important;
 /***********Latest Art Event Page****************************/
 
 .invitation{
-  background: url('../images/invitation.jpg') center center no-repeat;
+  background: url('../images/event-main.JPG') center center no-repeat;
   background-size: cover;
   height: 100vh;
 }
@@ -452,8 +452,8 @@ color: #fff !important;
 
 /***********Art Interview Page****************************/
 .interview-main-image {
-  background: url('https://images.pexels.com/photos/4342124/pexels-photo-4342124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center center no-repeat;
-  background-size: cover;
+  background: url('https://images.pexels.com/photos/4342124/pexels-photo-4342124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') top center no-repeat;
+
   height: 80vh;
   margin:3rem 5rem;
 }
