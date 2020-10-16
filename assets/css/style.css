@@ -12,6 +12,14 @@ color:#222222 !important;
 .display-4{
 font-size: 2.5rem !important;
 }
+a.btn-outline-dark{
+width: 200px;
+height: 40px;
+}
+a.btn-outline-dark:hover{
+  color: #fff !important;
+
+}
 .card, .card-footer{
     background-color: white !important;
     border: none !important;
@@ -69,21 +77,11 @@ padding : 30px 100px;
 font-family: 'Merriweather', serif;
 }
 /*****************************************ORIGINAL ART ***************************************************/
-.original-art{
-margin: 2rem 5rem;
-} 
-.original-art .row{
-margin:  2rem 0rem;
-}
-.images-block{
-display: flex;
-justify-content: space-between;
-height: 400px;
-margin: 2rem 4rem;
-}
+
+
 .background{
 height: 400px;
-background: no-repeat center center scroll;
+background: no-repeat center scroll;
 object-fit: contain;
 -webkit-background-size: contain;
 -moz-background-size: contain;
@@ -432,6 +430,15 @@ color: #fff !important;
   width: 100%;
 }
 
+#thumbnail .modal-content {
+  display: inline-block;
+  text-align: center;
+}
+#thumbnail .modal-content img{
+  height: 100%;
+  width: 100%;
+}
+
 /***********Latest Art Event Page****************************/
 .art-event-wrapper h2{
   font-family: 'Poppins', sans-serif;
@@ -481,7 +488,9 @@ color: #fff !important;
 
 /*****************************************RESPONSIVE ***************************************************/
 @media  screen and (max-width:768px){
-
+h2{
+  font-size: 20px !important;
+}
     .display-4{
         font-size: 1.5rem !important;
         }
@@ -503,11 +512,14 @@ display: none;
 margin: 1rem 1rem;
 }
 .carousel-item {
-height: 70vh;
+height: 50vh;
 }
 .intro-content{
 padding : 2rem 0rem;
 text-align: center;
+}
+.background{
+  background-size: cover;
 }
 .commissioned-art {
  display: none;
@@ -579,8 +591,14 @@ list-style-type: none;
 footer .menus li a{
 font-size: 15px;
 }
+
+.about-container p {
+  padding: 0px 20px;
+
+}
+
 .art-event-wrapper h2{
-  font-size: 20px;
+  font-size: 20px ;
 }
 
 .invitation{
