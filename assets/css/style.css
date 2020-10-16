@@ -433,11 +433,16 @@ color: #fff !important;
 }
 
 /***********Latest Art Event Page****************************/
-
+.art-event-wrapper h2{
+  font-family: 'Poppins', sans-serif;
+  margin-top: 30px;
+}
 .invitation{
   background: url('../images/event-main.JPG') center center no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 70vh;
+  margin: 0em 3em;
+ 
 }
 .thumbnail-image{
   display: flex;
@@ -574,8 +579,12 @@ list-style-type: none;
 footer .menus li a{
 font-size: 15px;
 }
+.art-event-wrapper h2{
+  font-size: 20px;
+}
+
 .invitation{
-height: 30vh;
+  height: 30vh;
   background-size: contain;
 }
 .thumbnail-image{
@@ -606,7 +615,6 @@ iframe{
 }
 .blog-wrapper p{
   font-size: 14px;
-  
 }
 }
 
