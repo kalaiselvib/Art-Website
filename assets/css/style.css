@@ -44,7 +44,7 @@ background-color: #EAEAEA;
 .intro-wrapper{
 margin: 1rem 0rem;
 }
-.carousel-item {
+.intro-wrapper .carousel-item {
 height: 80vh;
 min-height: 350px;
 background: no-repeat center center scroll;
@@ -53,27 +53,26 @@ background: no-repeat center center scroll;
 -o-background-size: cover;
 background-size: cover;
 }
-.carousel-fade .carousel-item {
+.intro-wrapper .carousel-fade .carousel-item {
 opacity: 0;
 transition: opacity ease-out ;
 }
-.carousel-fade .carousel-item.active,.carousel-fade .carousel-item-next.carousel-item-left,.carousel-fade .carousel-item-prev.carousel-item-right {
+.intro-wrapper .carousel-fade .carousel-item.active,.carousel-fade .carousel-item-next.carousel-item-left,.carousel-fade .carousel-item-prev.carousel-item-right {
 opacity: 1;
 }
-.carousel-fade .active.carousel-item-left,.carousel-fade .active.carousel-item-right {
+.intro-wrapper .carousel-fade .active.carousel-item-left,.carousel-fade .active.carousel-item-right {
 opacity: 0;
 }
-.carousel-fade .carousel-item-next,.carousel-fade .carousel-item-prev,.carousel-fade .carousel-item.active,.carousel-fade .active.carousel-item-left,.carousel-fade .active.carousel-item-prev {
+.intro-wrapper .carousel-fade .carousel-item-next,.carousel-fade .carousel-item-prev,.carousel-fade .carousel-item.active,.carousel-fade .active.carousel-item-left,.carousel-fade .active.carousel-item-prev {
 transform: translateX(0);
 transform: translate3d(0, 0, 0);
 }
-.intro-content{
+ .intro-content{
 padding : 30px 100px;
 font-family: 'Merriweather', serif;
 }
 /*****************************************ORIGINAL ART ***************************************************/
 .two-images{
-
   display: flex;
   justify-content: space-between;
   }
@@ -93,91 +92,33 @@ background-size: contain;
 
 
 /*****************************************COMMISSIONED ART ***************************************************/
-.commissioned-art {
-width: 800px;
-height: 500px;
-border-radius: 10px;
-overflow-x: hidden !important;
-margin:  auto;
-}
-.commissioned-art .slides{
-width: 500%;
-height: 500px;
-display: flex;
-}
-.commissioned-art .slides input{
-display: none;
-}
-.commissioned-art .slide{
-width: 20%;
-transition: 2s;
-}
-.commissioned-art .slide img{
-width: 800px;
-height: 500px;
-}
-/*css for manual slide navigation*/
-.navigation-manual{
-position: absolute;
-width: 800px;
-margin-top: -40px;
-display: flex;
-justify-content: center;
-}
-.manual-btn{
-border: 2px solid #40D3DC;
-padding: 5px;
-border-radius: 10px;
-cursor: pointer;
-transition: 1s;
-}
-.manual-btn:not(:last-child){
-margin-right: 40px;
-}
-.manual-btn:hover{
-background: #40D3DC;
-}
-#radio1:checked ~ .first{
-margin-left: 0;
-}
-#radio2:checked ~ .first{
-margin-left: -20%;
-}
-#radio3:checked ~ .first{
-margin-left: -40%;
-}
-#radio4:checked ~ .first{
-margin-left: -60%;
-}
-/*css for automatic navigation*/
-.navigation-auto{
-position: absolute;
-display: flex;
-width: 800px;
-justify-content: center;
-margin-top: 460px;
-}
-.navigation-auto div{
-border: 2px solid #40D3DC;
-padding: 5px;
-border-radius: 10px;
-transition: 1s;
-}
-.navigation-auto div:not(:last-child){
-margin-right: 40px;
-}
-#radio1:checked ~ .navigation-auto .auto-btn1{
-background: #40D3DC;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2{
-background: #40D3DC;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3{
-background: #40D3DC;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4{
-background: #40D3DC;
-}
+.commissioned-art-wrapper .carousel-fade .carousel-item {
+height: 100vh;
+  opacity: 0;
+  transition-duration: .6s;
+  transition-property: opacity;
+ }
+ 
+ .commissioned-art-wrapper .carousel-fade  .carousel-item.active,
+ .carousel-fade  .carousel-item-next.carousel-item-left,
+ .carousel-fade  .carousel-item-prev.carousel-item-right {
+   opacity: 1;
+ }
+ 
+ .commissioned-art-wrapper .carousel-fade .active.carousel-item-left,
+ .carousel-fade  .active.carousel-item-right {
+  opacity: 0;
+ }
+ 
+ .commissioned-art-wrapper .carousel-fade  .carousel-item-next,
+ .carousel-fade .carousel-item-prev,
+ .carousel-fade .carousel-item.active,
+ .carousel-fade .active.carousel-item-left,
+ .carousel-fade  .active.carousel-item-prev {
+  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
+ }
+
 .orderButton{
 margin:20px 0px 50px;
 width: 200px;
@@ -261,6 +202,13 @@ opacity: 0.6;
 .active,
 .demo:hover {
 opacity: 1;
+}
+
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
 }
 /*****************************************FOOTER***************************************************/
 footer .menus{
@@ -400,6 +348,29 @@ height: 200px;
 width: 300px;
 cursor: pointer;
 }
+/***********Latest Art Event Page****************************/
+.original-art-wrapper{
+  padding-bottom: 100px;
+}
+.original-art-wrapper .grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 100px 50px;
+  padding-bottom: 50px;
+}
+.original-art-wrapper .grid-container .grid-item{
+  height: 350px;
+  width: 380px;
+  margin: 30px 0px;
+}
+.original-art-wrapper .grid-container img{
+ height: 100%;
+ width: 100%;
+ margin: 30px 0px;
+}
+.original-art-wrapper .grid-container {
+  font-size: 20px;
+}
 /***********Art Interview Page****************************/
 .interview-main-image {
 background: url('https://images.pexels.com/photos/4342124/pexels-photo-4342124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') top center no-repeat;
@@ -454,40 +425,8 @@ text-align: center;
 .background{
 background-size: cover;
 }
-.commissioned-art {
-display: none;
-}
-.commissioned-art .slides{
-width: 500%;
-height: 400px;
-display: flex;
-}
-.commissioned-art .slide{
-width: 20%;
-transition: 2s;
-}
-.commissioned-art .slide img{
-width: 300px;
-height: 300px;
-}
-.manual-btn:not(:last-child){
-margin-right: 0px;
-}
-.manual-btn:hover{
-background: #40D3DC;
-}
-#radio1:checked ~ .first{
-margin-left: 0;
-}
-#radio2:checked ~ .first{
-margin-left: -0%;
-}
-#radio3:checked ~ .first{
-margin-left: -0%;
-}
-#radio4:checked ~ .first{
-margin-left: -0%;
-}
+
+
 .original-art {
 margin: 2rem 0rem;
 }
@@ -551,5 +490,29 @@ margin: 30px 20px;
 }
 .blog-wrapper p{
 font-size: 14px;
+}
+.original-art-wrapper{
+  padding-bottom: 50px;
+}
+.original-art-wrapper .grid-container{
+justify-content: center;
+  grid-template-columns: auto auto ;
+  grid-gap: 50px 25px;
+  padding-bottom: 25px;
+}
+.original-art-wrapper .grid-container .grid-item{
+  height: 150px;
+  width: 150px;
+  margin: 15px 0px;
+}
+.original-art-wrapper .grid-container img{
+
+ margin: 15px 0px;
+}
+.original-art-wrapper .grid-container {
+  font-size: 15px;
+}
+.commissioned-art-wrapper .carousel-fade .carousel-item {
+  height: auto;
 }
 }
